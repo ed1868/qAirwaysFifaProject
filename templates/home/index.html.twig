@@ -1,0 +1,1033 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="page-title-tabs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div><h1>Perth - Doha</h1></div>
+                    <div class="date-time-person">
+                        <span><i class="fa fa-calendar"></i> <p>20 Nov 2022 - 07 Dec 2022 </p></span>
+                        <span><i class="fa fa-user"></i> <p>1 Room, 1 Traveler</p></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fh-tabs-scroll" class="fh-tabs__wrap">
+        <div class="container">
+            <div class="fh-tabs__overview nav nav-tabs">
+                <a data-toggle="tab" data-product="hotel" data-sync="true" role="tab" href="#tabs-category" class="fh-tabs__item fh-tabs__hotel fh-tabs__category nav-link active"
+                   aria-selected="true">
+                    <div title="Standard Hotel (Kingsgate Hotel Doha or similar) - Support your team & R16" class="picture"
+                         style="background-image: url({{ asset('img/hotel/Kingsgate-Hotel-Doha-Superior-Room-King-Bed.jpg') }});"></div>
+
+                    <div class="detail">
+                        <div class="title">
+                            <strong>Standard Hotel (Kingsgate Hotel Doha or similar) - Support your team & R16</strong>
+                        </div>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <strong class="room-category">
+                            <i class="fa fa-bed"></i>Room Category: According to availability
+                        </strong>
+                        <div class="room-info">
+                            <i class="fa fa-check"></i>Bed &amp; Breakfast
+                        </div>
+                        <div class="cancellation-category">
+                            <i class="fa fa-xmark"></i>Non-Refundable
+                        </div>
+                        <div class="cancellation-category">
+                            <p>Enjoy a stay at a centrally-located hotel and get easy access to places of interest such as ...</p>
+                        </div>
+                        <span class="show-more-info-hotel">Show more</span>
+                    </div>
+                </a>
+                <a data-toggle="tab" data-product="flight" data-sync="true" role="tab" href="#tabs-flight" class="fh-tabs__item fh-tabs__flight nav-link">
+                    <div class="title">
+                        <strong>Flight</strong>
+                    </div>
+                    <div class="flight-way__tabs">
+                        <div class="flight-way__view">
+                            <div class="line-way">
+                                <div class="line-brand multiple-airlines-selector">
+                                    <div class="line-brand__avartar multi-flights">
+                                        <img src="{{ asset('img/flight/multiple-flights.jpg') }}" alt="QF">
+                                    </div>
+                                    <strong class="airline-name">Multiple Airlines</strong>
+                                    <strong>19 Nov 2022</strong></div>
+                                <div class="line-time">
+                                    <div class="line-time__time">
+                                        <strong>13:20</strong>
+                                        <span>PER</span>
+                                    </div>
+                                    <div class="line-time__direction">
+                                        <small>20h 10m</small>
+                                        <div class="ico-flight flight-depart">
+                                            <i class="fa fa-plane"></i>
+                                        </div>
+                                        <div>
+                                            <small>1 Stop</small>
+                                            <small>(<span>via</span>ADL)</small>
+                                        </div>
+                                    </div>
+                                    <div class="line-time__time">
+                                        <strong>04:30<sup>+1</sup></strong>
+                                        <span>DOH</span>
+                                    </div>
+                                </div>
+                                <div class="line-control">
+                                    <span href="#modalFlightDetail" data-toggle="modal" class="btn btn-sm btn-link">
+                                        <span>Details</span><i class="fa fa-info-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flight-way__tabs">
+                        <div class="flight-way__view">
+                            <div class="line-way">
+                                <div class="line-brand multiple-airlines-selector">
+                                    <div class="line-brand__avartar multi-flights"><img src="https://storage.googleapis.com/gqcdn/airline-logos/svg/QR.svg" alt="QR"></div>
+                                    <strong class="airline-name">Qatar Airways</strong>
+                                    <strong>07 Dec 2022</strong>
+                                </div>
+                                <div class="line-time">
+                                    <div class="line-time__time">
+                                        <strong>02:35</strong>
+                                        <span>DOH</span>
+                                    </div>
+                                    <div class="line-time__direction">
+                                        <small>10h 50m</small>
+                                        <div class="ico-flight flight-depart">
+                                            <i class="fa fa-plane"></i>
+                                        </div>
+                                        <div><small>Direct</small></div>
+                                    </div>
+                                    <div class="line-time__time">
+                                        <strong>18:25</strong>
+                                        <span>PER</span>
+                                    </div>
+                                </div>
+                                <div class="line-control">
+                                    <span href="#modalFlightDetail" data-toggle="modal" class="btn btn-sm btn-link">
+                                        <span>Details</span><i class="fa fa-info-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="fh-tabs__item fh-tabs__control fh-tabs__control-category">
+                    <div class="flight-detail">
+                        <span class="person-title">Per person</span>
+                        <div class="person-price">
+                            <strong>AUD 19,383</strong>
+                        </div>
+                        <span class="total-title">Total Price</span>
+                        <div class="total-price">
+                            <strong style="font-weight: bold;">AUD 19,383</strong>
+                        </div>
+                        <span class="all-taxes">All taxes and fees included</span>
+                        <a href="{{ path('book') }}" class="btn btn-lg btn-hard btn-hard__book btn-primary bt-effect bt-selected btn-hard__tablet capitalize">Book</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-wrap enable-sticky" style="padding-top: 0px;">
+        <div class="content-tabs-header">
+            <div class="container nav nav-tabs">
+                <button href="#tabs-category" data-sync="true" data-toggle="tab" role="tab" class="item-tabs-header nav-item nav-link active">
+                    <i class="fa fa-bed"></i>
+                    <span>Change Category</span>
+                </button>
+                <button href="#tabs-flight" data-sync="true" data-toggle="tab" role="tab" class="item-tabs-header nav-item nav-link">
+                    <i class="fa fa-plane"></i>
+                    <span>Change Flight</span></button>
+            </div>
+        </div>
+        <div class="content-tabs-main tab-content">
+            <div class="content-tabs-wrap tab-pane active show" id="tabs-category">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div>
+                                <div class="sidebar-wrap">
+                                    <div class="sidebar__box">
+                                        <div class="sidebar__title"><h2>Filter By Star</h2></div>
+                                        <div class="sidebar__content">
+                                            <div class="sidebar__rating">
+                                                <div class="rating-star-check">
+                                                    <div class="rating-col">
+                                                        <div class="rating-check">
+                                                            <input type="checkbox" name="checkbox01" id="checkbox5" class="ipt-check" value="5">
+                                                            <label for="checkbox5" class="ipt-label">
+                                                                <span class="box"></span>
+                                                                <span class="rating-star">
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rating-col">
+                                                        <div class="rating-check">
+                                                            <input type="checkbox" name="checkbox01" id="checkbox4" class="ipt-check" value="4">
+                                                            <label for="checkbox4" class="ipt-label">
+                                                                <span class="box"></span>
+                                                                <span class="rating-star">
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rating-col">
+                                                        <div class="rating-check"><input type="checkbox" name="checkbox01" id="checkbox3" class="ipt-check" value="3">
+                                                            <label for="checkbox3" class="ipt-label">
+                                                                <span class="box"></span>
+                                                                <span class="rating-star">
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rating-col">
+                                                        <div class="rating-check"><input type="checkbox" name="checkbox01" id="checkbox2" class="ipt-check" value="2">
+                                                            <label for="checkbox2" class="ipt-label">
+                                                                <span class="box"></span>
+                                                                <span class="rating-star">
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                </span>
+                                                            </label>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="rating-col">
+                                                        <div class="rating-check"><input type="checkbox" name="checkbox01" id="checkbox1" class="ipt-check" value="1">
+                                                            <label for="checkbox1" class="ipt-label">
+                                                                <span class="box"></span>
+                                                                <span class="rating-star">
+                                                                    <i class="fa fa-star"></i>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 mt-4">
+                            <div class="avai-hotel avai-category">
+                                <div class="countAvai">
+                                    <div class="section-left">
+                                        <p class="my-0"><span>Showing 2 of 2 categories</span></p>
+                                        <p class="my-0">
+                                            <span>Check-in</span> Sun, 20 Nov.
+                                            <span>Check-out</span> Wed, 07 Dec
+                                            <span class="category-stay"> (<span>17 nights</span>) </span>
+                                        </p>
+                                    </div>
+                                    <div class="mtr-input section-right">
+                                        <select data-tracking="order-by" class="mtr-ipt">
+                                            <option value="CATEGORYNAME;ASC">Name (A to Z)</option>
+                                            <option value="CATEGORYNAME;DESC">Name (Z to A)</option>
+                                        </select>
+                                        <span class="mtr-bar"></span>
+                                    </div>
+                                </div>
+                                <div id="hotel-container">
+                                    <div class="hotel-row">
+                                        <div class="fh-tabs__overview">
+                                            <div class="fh-tabs__item fh-tabs__hotel fh-tabs__category">
+                                                <div class="picture hotel_picture">
+                                                    <img src="{{ asset('img/hotel/Kingsgate-Hotel-Doha-Superior-Room-King-Bed.jpg') }}"
+                                                         altsrc="{{ asset('img/hotel/images-default.jpg') }}"/>
+                                                </div>
+                                                <div class="detail">
+                                                    <h2 class="name">Standard Hotel (Kingsgate Hotel Doha or similar) - Support your team &amp; R16</h2>
+                                                    <div class="rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <strong class="room-category">
+                                                        <i class="fa fa-bed"></i> Room Category: According to availability
+                                                    </strong>
+                                                    <div class="room-info">
+                                                        <i class="fa fa-check"></i>Bed & Breakfast
+                                                    </div>
+                                                    <div class="cancellation-category">
+                                                        <p>
+                                                            <span><i class="fa fa-xmark"></i>Non-Refundable</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="cancellation-category">
+                                                        <p>
+                                                            Enjoy a stay at a centrally-located hotel and get easy access to places
+                                                            of interest such as Souq Waqif, the National Museum of Qatar, Msheireb ...
+                                                        </p>
+                                                    </div>
+                                                    <a href="javascript:void(0)" class="show-more-info-hotel"> Show more</a>
+                                                </div>
+                                            </div>
+                                            <div class="fh-tabs__item fh-tabs__control">
+                                                <div class="fh-tabs__bottom">
+                                                    <div class="price-detail">
+                                                        <span class="per-title">Per person</span>
+                                                        <div class="per-price">
+                                                            <strong>AUD 19,383</strong>
+                                                        </div>
+                                                        <span class="total-price-title">Total Price</span>
+                                                        <div class="price-total">
+                                                            <strong style="font-weight: bold;">AUD 19,383 </strong>
+                                                        </div>
+                                                        <span class="taxes-all">All taxes and fees included</span>
+                                                    </div>
+                                                    <a data-tracking="btn-select-hotel" href="javascript:void(0);"
+                                                       class="btn btn-hard btn-hard__select bt-effect btn-outline-primary btn-hard__tablet capitalize bt-outline-selected">
+                                                        <i class="fa fa-check"></i> Selected
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fh-tabs__overview">
+                                            <div class="fh-tabs__item fh-tabs__hotel fh-tabs__category">
+                                                <div class="picture hotel_picture">
+                                                    <img src="{{ asset('img/hotel/best-western-1024x768.jpg') }}" altsrc="{{ asset('img/hotel/images-default.jpg') }}"/>
+                                                </div>
+                                                <div class="detail">
+                                                    <h2 class="name">Superior Hotel (Best Western Plus Doha or similar) - Support your team & R16</h2>
+                                                    <div class="rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+
+                                                    </div>
+                                                    <strong class="room-category">
+                                                        <i class="fa fa-bed"></i> Room Category: According to availability
+                                                    </strong>
+                                                    <div class="room-info">
+                                                        <i class="fa fa-check"></i>Bed & Breakfast
+                                                    </div>
+                                                    <div class="cancellation-category">
+                                                        <p>
+                                                            <span><i class="fa fa-xmark"></i>Non-Refundable</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="cancellation-category">
+                                                        <p>Explore Qatar’s treasured gems from a hotel that’s right in the centre of
+                                                            Doha. The rooms are cosy, elegant and include breakfast. The metro ...
+                                                        </p>
+                                                    </div>
+                                                    <a href="javascript:void(0)" class="show-more-info-hotel">Show more</a>
+                                                </div>
+                                            </div>
+                                            <div class="fh-tabs__item fh-tabs__control">
+                                                <div class="fh-tabs__bottom">
+                                                    <div class="price-detail">
+                                                        <span class="per-title">Per person</span>
+                                                        <div class="per-price">
+                                                            <strong>AUD 23,417</strong>
+                                                        </div>
+                                                        <span class="total-price-title">Total Price</span>
+                                                        <div class="price-total">
+                                                            <strong style="font-weight: bold;">AUD 23,417 </strong>
+                                                        </div>
+                                                        <span class="taxes-all">All taxes and fees included</span>
+                                                    </div>
+                                                    <a data-tracking="btn-select-hotel" href="javascript:void(0);"
+                                                       class="btn btn-hard btn-hard__select bt-effect btn-outline-primary btn-hard__tablet capitalize">
+                                                        Select
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-flight" class="content-tabs-wrap tab-pane">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div>
+
+                                <div class="sidebar-overlay"></div>
+                                <div class="sidebar-wrap">
+                                    <div class="sidebar__box">
+                                        <div>
+                                            <div class="sidebar__title"><h2>Stops</h2></div>
+                                            <div class="sidebar__content">
+                                                <div class="sidebar__dropdown">
+                                                    <ul>
+                                                        <li class="item-dropdown">
+                                                            <div class="style-check">
+                                                                <input data-tracking="filter-by" type="checkbox" name="airlineStops" id="non-stop" class="ipt-check">
+                                                                <label for="non-stop" class="ipt-label">
+                                                                    <span class="box"></span>
+                                                                    <span class="drop-text">Direct</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li class="item-dropdown">
+                                                            <div class="style-check">
+                                                                <input data-tracking="filter-by" type="checkbox" name="airlineStops" id="one-stop" class="ipt-check">
+                                                                <label for="one-stop" class="ipt-label">
+                                                                    <span class="box"></span>
+                                                                    <span class="drop-text">1 Stop</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li class="item-dropdown">
+                                                            <div class="style-check">
+                                                                <input data-tracking="filter-by" type="checkbox" name="airlineStops" id="more-stops" class="ipt-check">
+                                                                <label for="more-stops" class="ipt-label">
+                                                                    <span class="box"></span>
+                                                                    <span class="drop-text">2+ Stops</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sidebar-airline-name">
+                                            <div class="sidebar__title">
+                                                <h2>Airline Name</h2>
+                                            </div>
+                                            <div class="sidebar__content">
+                                                <div class="sidebar__dropdown">
+                                                    <ul>
+                                                        <li class="item-dropdown">
+                                                            <div class="style-check">
+                                                                <input data-tracking="filter-by" type="checkbox" name="airlineNames" id="MHair" class="ipt-check" value="MH"
+                                                                       style="display: none;">
+                                                                <label for="MHair" class="ipt-label">
+                                                                    <span class="box"></span>
+                                                                    <div class="drop-text drop-text-station">
+                                                                        <img src="https://storage.googleapis.com/gqcdn/airline-logos/svg/MH.svg" alt="" class="airline-icon">
+                                                                        <span>Malaysia Airlines</span>
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li class="item-dropdown">
+                                                            <div class="style-check">
+                                                                <input data-tracking="filter-by" type="checkbox" name="airlineNames" id="QFair" class="ipt-check" value="QF"
+                                                                       style="display: none;">
+                                                                <label for="QFair" class="ipt-label">
+                                                                    <span class="box"></span>
+                                                                    <div class="drop-text drop-text-station">
+                                                                        <img src="https://storage.googleapis.com/gqcdn/airline-logos/svg/QF.svg" alt="" class="airline-icon">
+                                                                        <span>Qantas</span>
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li class="item-dropdown">
+                                                            <div class="style-check">
+                                                                <input data-tracking="filter-by" type="checkbox" name="airlineNames" id="VAair" class="ipt-check" value="VA"
+                                                                       style="display: none;">
+                                                                <label for="VAair" class="ipt-label">
+                                                                    <span class="box"></span>
+                                                                    <div class="drop-text drop-text-station">
+                                                                        <img src="https://storage.googleapis.com/gqcdn/airline-logos/svg/VA.svg" alt="" class="airline-icon">
+                                                                        <span>Viasa</span>
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="sidebar__title"><h2><span>Departure Time</span> <small>- Perth</small></h2></div>
+                                            <div class="sidebar__content">
+                                                <div class="sidebar__slider">
+                                                    <div class="result-sidebar-box">
+                                                        <div class="d-flex justify-content-center my-4">
+                                                            <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
+                                                            <input class="range-time" type="range" min="0" max="24"/>
+                                                            <span class="font-weight-bold indigo-text ml-2 mt-1">24</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="sidebar__title"><h2><span>Arrival Time</span> <small>- Doha</small></h2></div>
+                                            <div class="sidebar__content">
+                                                <div class="sidebar__slider">
+                                                    <div class="d-flex justify-content-center my-4">
+                                                        <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
+                                                        <input class="range-time" type="range" min="0" max="24"/>
+                                                        <span class="font-weight-bold indigo-text ml-2 mt-1">24</span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+
+                            <div isflightonly="true">
+                                <div class="avai-flight avai-flight--category"><!---->
+                                    <div class="fh-tabs__title">
+                                        <h4><span>Select flight from Perth to Doha</span> <small> Nov 20, 2022</small>
+                                            <div class="fh-tabs__right-info"><p>All departures/arrival times are local time.</p>
+                                                <p>Prices are round trip per person, inc. taxes and fees</p></div>
+                                        </h4>
+                                        <div class="fh-tabs__utils">
+                                            <p>
+                                                <span style="">4 Flight(s) found</span>
+                                                <span style="display: none;">Loading flights...</span>
+                                            </p>
+                                            <div class="fh-tabs__sort">
+                                                <div class="mtr-input"><select data-tracking="order-by" class="mtr-ipt">
+                                                        <option value="SolutionPrice;ASC">Price (Lowest)</option>
+                                                        <option value="SolutionPrice;DESC">Price (Highest)</option>
+                                                        <option value="Duration;ASC">Duration (Shortest)</option>
+                                                        <option value="Duration;DESC">Duration (Longest)</option>
+                                                        <option value="DepartureTime;ASC">Departure Time (Earliest)</option>
+                                                        <option value="DepartureTime;DESC">Departure Time (Latest)</option>
+                                                        <option value="ArrivalTime;ASC">Arrival Time (Earliest)</option>
+                                                        <option value="ArrivalTime;DESC">Arrival Time (Latest)</option>
+                                                    </select> <span class="mtr-bar"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="">
+                                        <div>
+                                            <div>
+                                                <div class="fh-tabs__overview">
+                                                    <div class="fh-tabs__item fh-tabs__flight">
+                                                        <div class="flight-way__tabs">
+                                                            <div class="flight-way__view">
+                                                                <div class="line-way">
+                                                                    <div class="line-brand">
+                                                                        <div class="line-brand__avartar multi-flights">
+                                                                            <img src="{{ asset('img/flight/multiple-flights.jpg') }}" alt="QF"></div>
+                                                                        <div class="multiple-airlines"><strong>Multiple Airlines</strong>
+                                                                            <div>
+                                                                                <small>Qantas</small>
+                                                                                <small> | QF886</small>
+                                                                            </div>
+                                                                            <div>
+                                                                                <small>Qatar Airways</small>
+                                                                                <small> | QR915</small>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="line-time">
+                                                                        <div class="line-time__time">
+                                                                            <strong>13:20</strong>
+                                                                            <span>PER</span>
+                                                                        </div>
+                                                                        <div class="line-time__direction">
+                                                                            <small>20h 10m</small>
+                                                                            <div class="ico-flight flight-depart">
+                                                                                <i class="fa fa-plane"></i>
+                                                                            </div>
+                                                                            <div>
+                                                                                <small style="display: none;">Direct</small>
+                                                                                <small>1 Stop</small>
+                                                                                <small style="display: none;">2+ Stops</small>
+                                                                                <small> (<span>via</span>ADL)</small>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="line-time__time">
+                                                                            <strong> 04:30 <sup>+1</sup></strong>
+                                                                            <span>DOH</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="line-control">
+                                                                        <a href="#modalFlightAvaiDetail" data-toggle="modal" class="btn btn-sm btn-link">
+                                                                            <span>Details</span>
+                                                                            <i class="fa fa-info-circle"></i>
+                                                                        </a>
+                                                                        <div class="line-descrip">
+                                                                            <span class="cabinClass economy">
+                                                                                Economy
+                                                                                <span>Class</span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <small class="dep-date">19 Nov 2022</small> <!----></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fh-tabs__item fh-tabs__control">
+                                                        <div class="price-summary-panel">
+                                                            <div class="tab-flight-detail"><span class="person-flight-title">Per person</span>
+                                                                <div class="person-flight-price">
+                                                                    AUD 19,383
+                                                                </div>
+                                                                <span class="flight-title">Total Price</span>
+                                                                <div class="flight-total">
+                                                                    AUD 19,383
+                                                                </div>
+                                                                <span class="flight-taxes">All taxes and fees included</span></div>
+                                                        </div>
+                                                        <div class="fh-tabs__bottom"><a data-tracking="btn-select-flight" href="javascript:void(0)"
+                                                                                        class="btn btn-hard btn-hard__select btn-outline-primary bt-effect btn-hard__tablet capitalize bt-outline-selected"><i
+                                                                        class="icon-check"></i>
+                                                                Selected
+                                                            </a> <!----></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="fh-tabs__overview">
+                                                    <div class="fh-tabs__item fh-tabs__flight">
+                                                        <div class="flight-way__tabs">
+                                                            <div class="flight-way__view">
+                                                                <div class="line-way"><span class="hidden-supplier-code-flight">Amadeus</span>
+                                                                    <div class="line-brand">
+                                                                        <div class="line-brand__avartar multi-flights"><img src="/images/multiple-flights.jpg" alt="VA"></div>
+                                                                        <div class="multiple-airlines"><strong>Multiple Airlines</strong>
+                                                                            <div><small>Viasa</small><small> | VA560</small></div>
+                                                                            <div><small>Qatar Airways</small><small> | QR909</small></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="line-time">
+                                                                        <div class="line-time__time"><strong>12:15</strong> <span>PER</span></div>
+                                                                        <div class="line-time__direction"><small>21h 35m</small>
+                                                                            <div class="ico-flight flight-depart"><i class="icon-flight"></i></div>
+                                                                            <div><small style="display: none;">Direct</small> <small>1 Stop</small> <small
+                                                                                        style="display: none;">2+
+                                                                                    Stops</small> <small>
+                                                                                    (<span>via</span>
+                                                                                    SYD
+                                                                                    <!---->)
+                                                                                </small></div>
+                                                                        </div>
+                                                                        <div class="line-time__time"><strong>
+                                                                                04:50
+                                                                                <sup>+1</sup></strong> <span>DOH</span></div>
+                                                                    </div>
+                                                                    <div class="line-control"><a href="#modalFlightAvaiDetail" data-toggle="modal"
+                                                                                                 class="btn btn-sm btn-link"><span>Details</span> <i
+                                                                                    class="icon-information"></i></a>
+                                                                        <div class="line-descrip"><span class="cabinClass economy">Economy
+                                                                                <!----> <span>Class</span></span></div>
+                                                                    </div>
+                                                                </div>
+                                                                <small class="dep-date">19 Nov 2022</small> <!----></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fh-tabs__item fh-tabs__control">
+                                                        <div class="price-summary-panel">
+                                                            <div class="tab-flight-detail"><span class="person-flight-title">Per person</span>
+                                                                <div class="person-flight-price">
+                                                                    AUD 19,383
+                                                                </div>
+                                                                <span class="flight-title">Total Price</span>
+                                                                <div class="flight-total">
+                                                                    AUD 19,383
+                                                                </div>
+                                                                <span class="flight-taxes">All taxes and fees included</span></div>
+                                                        </div>
+                                                        <div class="fh-tabs__bottom"><a data-tracking="btn-select-flight" href="javascript:void(0)"
+                                                                                        class="btn btn-hard btn-hard__select btn-outline-primary bt-effect btn-hard__tablet capitalize">
+                                                                <!---->
+                                                                Select
+                                                            </a> <!----></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="fh-tabs__overview">
+                                                    <div class="fh-tabs__item fh-tabs__flight">
+                                                        <div class="flight-way__tabs">
+                                                            <div class="flight-way__view">
+                                                                <div class="line-way"><span class="hidden-supplier-code-flight">Amadeus</span>
+                                                                    <div class="line-brand">
+                                                                        <div class="line-brand__avartar multi-flights"><img src="/images/multiple-flights.jpg" alt="MH"></div>
+                                                                        <div class="multiple-airlines"><strong>Multiple Airlines</strong>
+                                                                            <div><small>Malaysia Airlines</small><small> | MH126</small></div>
+                                                                            <div><small>Qatar Airways</small><small> | QR845</small></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="line-time">
+                                                                        <div class="line-time__time"><strong>02:25</strong> <span>PER</span></div>
+                                                                        <div class="line-time__direction"><small>14h 55m</small>
+                                                                            <div class="ico-flight flight-depart"><i class="icon-flight"></i></div>
+                                                                            <div><small style="display: none;">Direct</small> <small>1 Stop</small> <small
+                                                                                        style="display: none;">2+
+                                                                                    Stops</small> <small>
+                                                                                    (<span>via</span>
+                                                                                    KUL
+                                                                                    <!---->)
+                                                                                </small></div>
+                                                                        </div>
+                                                                        <div class="line-time__time"><strong>
+                                                                                12:20
+                                                                                <!----></strong> <span>DOH</span></div>
+                                                                    </div>
+                                                                    <div class="line-control"><a href="#modalFlightAvaiDetail" data-toggle="modal"
+                                                                                                 class="btn btn-sm btn-link"><span>Details</span> <i
+                                                                                    class="icon-information"></i></a>
+                                                                        <div class="line-descrip"><span class="cabinClass economy">Economy
+                                                                                <!----> <span>Class</span></span></div>
+                                                                    </div>
+                                                                </div>
+                                                                <small class="dep-date">20 Nov 2022</small> <!----></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fh-tabs__item fh-tabs__control">
+                                                        <div class="price-summary-panel">
+                                                            <div class="tab-flight-detail"><span class="person-flight-title">Per person</span>
+                                                                <div class="person-flight-price">
+                                                                    AUD 19,501
+                                                                </div>
+                                                                <span class="flight-title">Total Price</span>
+                                                                <div class="flight-total">
+                                                                    AUD 19,501
+                                                                </div>
+                                                                <span class="flight-taxes">All taxes and fees included</span></div>
+                                                        </div>
+                                                        <div class="fh-tabs__bottom"><a data-tracking="btn-select-flight" href="javascript:void(0)"
+                                                                                        class="btn btn-hard btn-hard__select btn-outline-primary bt-effect btn-hard__tablet capitalize">
+                                                                <!---->
+                                                                Select
+                                                            </a> <!----></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="fh-tabs__overview">
+                                                    <div class="fh-tabs__item fh-tabs__flight">
+                                                        <div class="flight-way__tabs">
+                                                            <div class="flight-way__view">
+                                                                <div class="line-way"><span class="hidden-supplier-code-flight">Amadeus</span>
+                                                                    <div class="line-brand">
+                                                                        <div class="line-brand__avartar multi-flights"><img src="/images/multiple-flights.jpg" alt="MH"></div>
+                                                                        <div class="multiple-airlines"><strong>Multiple Airlines</strong>
+                                                                            <div><small>Malaysia Airlines</small><small> | MH124</small></div>
+                                                                            <div><small>Qatar Airways</small><small> | QR853</small></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="line-time">
+                                                                        <div class="line-time__time"><strong>16:15</strong> <span>PER</span></div>
+                                                                        <div class="line-time__direction"><small>18h 15m</small>
+                                                                            <div class="ico-flight flight-depart"><i class="icon-flight"></i></div>
+                                                                            <div><small style="display: none;">Direct</small> <small>1 Stop</small> <small
+                                                                                        style="display: none;">2+
+                                                                                    Stops</small> <small>
+                                                                                    (<span>via</span>
+                                                                                    KUL
+                                                                                    <!---->)
+                                                                                </small></div>
+                                                                        </div>
+                                                                        <div class="line-time__time"><strong>
+                                                                                05:30
+                                                                                <sup>+1</sup></strong> <span>DOH</span></div>
+                                                                    </div>
+                                                                    <div class="line-control"><a href="#modalFlightAvaiDetail" data-toggle="modal"
+                                                                                                 class="btn btn-sm btn-link"><span>Details</span> <i
+                                                                                    class="icon-information"></i></a>
+                                                                        <div class="line-descrip"><span class="cabinClass economy">Economy
+                                                                                <!----> <span>Class</span></span></div>
+                                                                    </div>
+                                                                </div>
+                                                                <small class="dep-date">19 Nov 2022</small> <!----></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fh-tabs__item fh-tabs__control">
+                                                        <div class="price-summary-panel">
+                                                            <div class="tab-flight-detail"><span class="person-flight-title">Per person</span>
+                                                                <div class="person-flight-price">
+                                                                    AUD 19,501
+                                                                </div>
+                                                                <span class="flight-title">Total Price</span>
+                                                                <div class="flight-total">
+                                                                    AUD 19,501
+                                                                </div>
+                                                                <span class="flight-taxes">All taxes and fees included</span></div>
+                                                        </div>
+                                                        <div class="fh-tabs__bottom"><a data-tracking="btn-select-flight" href="javascript:void(0)"
+                                                                                        class="btn btn-hard btn-hard__select btn-outline-primary bt-effect btn-hard__tablet capitalize">
+                                                                <!---->
+                                                                Select
+                                                            </a> <!----></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="paganition-wrap center"><a href="#" class="item-paganition bt-effect disabled">Load more</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="display: none;">
+                                        <div class="fh-tabs__overview">
+                                            <div class="fh-tabs__item fh-tabs__flight">
+                                                <div class="flight-way__tabs">
+                                                    <div class="flight-way__view">
+                                                        <div class="flight-way__view">
+                                                            <div class="lda__wrap">
+                                                                <div class="lda">
+                                                                    <div class="lda__bar"></div>
+                                                                    <div class="lda__bar lda__bar--50"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fh-tabs__item fh-tabs__control">
+                                                <div class="lda lda--fbot">
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--two"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fh-tabs__overview">
+                                            <div class="fh-tabs__item fh-tabs__flight">
+                                                <div class="flight-way__tabs">
+                                                    <div class="flight-way__view">
+                                                        <div class="flight-way__view">
+                                                            <div class="lda__wrap">
+                                                                <div class="lda">
+                                                                    <div class="lda__bar"></div>
+                                                                    <div class="lda__bar lda__bar--50"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fh-tabs__item fh-tabs__control">
+                                                <div class="lda lda--fbot">
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--two"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fh-tabs__overview">
+                                            <div class="fh-tabs__item fh-tabs__flight">
+                                                <div class="flight-way__tabs">
+                                                    <div class="flight-way__view">
+                                                        <div class="flight-way__view">
+                                                            <div class="lda__wrap">
+                                                                <div class="lda">
+                                                                    <div class="lda__bar"></div>
+                                                                    <div class="lda__bar lda__bar--50"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fh-tabs__item fh-tabs__control">
+                                                <div class="lda lda--fbot">
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--two"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fh-tabs__overview">
+                                            <div class="fh-tabs__item fh-tabs__flight">
+                                                <div class="flight-way__tabs">
+                                                    <div class="flight-way__view">
+                                                        <div class="flight-way__view">
+                                                            <div class="lda__wrap">
+                                                                <div class="lda">
+                                                                    <div class="lda__bar"></div>
+                                                                    <div class="lda__bar lda__bar--50"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fh-tabs__item fh-tabs__control">
+                                                <div class="lda lda--fbot">
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--two"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fh-tabs__overview">
+                                            <div class="fh-tabs__item fh-tabs__flight">
+                                                <div class="flight-way__tabs">
+                                                    <div class="flight-way__view">
+                                                        <div class="flight-way__view">
+                                                            <div class="lda__wrap">
+                                                                <div class="lda">
+                                                                    <div class="lda__bar"></div>
+                                                                    <div class="lda__bar lda__bar--50"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fh-tabs__item fh-tabs__control">
+                                                <div class="lda lda--fbot">
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--two"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fh-tabs__overview">
+                                            <div class="fh-tabs__item fh-tabs__flight">
+                                                <div class="flight-way__tabs">
+                                                    <div class="flight-way__view">
+                                                        <div class="flight-way__view">
+                                                            <div class="lda__wrap">
+                                                                <div class="lda">
+                                                                    <div class="lda__bar"></div>
+                                                                    <div class="lda__bar lda__bar--50"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fh-tabs__item fh-tabs__control">
+                                                <div class="lda lda--fbot">
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--two"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fh-tabs__overview">
+                                            <div class="fh-tabs__item fh-tabs__flight">
+                                                <div class="flight-way__tabs">
+                                                    <div class="flight-way__view">
+                                                        <div class="flight-way__view">
+                                                            <div class="lda__wrap">
+                                                                <div class="lda">
+                                                                    <div class="lda__bar"></div>
+                                                                    <div class="lda__bar lda__bar--50"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fh-tabs__item fh-tabs__control">
+                                                <div class="lda lda--fbot">
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--two"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fh-tabs__overview">
+                                            <div class="fh-tabs__item fh-tabs__flight">
+                                                <div class="flight-way__tabs">
+                                                    <div class="flight-way__view">
+                                                        <div class="flight-way__view">
+                                                            <div class="lda__wrap">
+                                                                <div class="lda">
+                                                                    <div class="lda__bar"></div>
+                                                                    <div class="lda__bar lda__bar--50"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fh-tabs__item fh-tabs__control">
+                                                <div class="lda lda--fbot">
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--two"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fh-tabs__overview">
+                                            <div class="fh-tabs__item fh-tabs__flight">
+                                                <div class="flight-way__tabs">
+                                                    <div class="flight-way__view">
+                                                        <div class="flight-way__view">
+                                                            <div class="lda__wrap">
+                                                                <div class="lda">
+                                                                    <div class="lda__bar"></div>
+                                                                    <div class="lda__bar lda__bar--50"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fh-tabs__item fh-tabs__control">
+                                                <div class="lda lda--fbot">
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--two"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fh-tabs__overview">
+                                            <div class="fh-tabs__item fh-tabs__flight">
+                                                <div class="flight-way__tabs">
+                                                    <div class="flight-way__view">
+                                                        <div class="flight-way__view">
+                                                            <div class="lda__wrap">
+                                                                <div class="lda">
+                                                                    <div class="lda__bar"></div>
+                                                                    <div class="lda__bar lda__bar--50"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fh-tabs__item fh-tabs__control">
+                                                <div class="lda lda--fbot">
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--50"></div>
+                                                    <div class="lda__bar lda__bar--two"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="paganition-wrap">
+                                            <div class="item-paganition lda__bar lda__bar--h60"></div>
+                                            <span class="count-page lda__bar"></span>
+                                            <div class="item-paganition lda__bar lda__bar--h60"></div>
+                                        </div>
+                                    </div>
+                                </div> <!----></div> <!----></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

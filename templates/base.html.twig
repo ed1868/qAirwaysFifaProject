@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US" class=" ">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Qatar Airways Holidays {# | Flight: #}</title> {# TODO add flight's from/to on the title #}
+    <meta name="theme-color" content="#19ac5b">
+    <link rel="icon" href="{{ asset('img/favicon.ico') }}">
+    {% block stylesheets %}
+        {#- DATE PICKER -#}
+        <style>
+            @font-face {
+                font-family: latoR;
+                src: url({{ asset('fonts/Lato-Regular.ttf') }});
+            }
+        </style>
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap-grid.css') }}">
+        <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
+        {#        <link rel="stylesheet" href="{{ asset('css/bootstrap-reboot.css') }}"> #}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    {% endblock %}
+</head>
+<body>
+
+<input type="hidden" id="baseCloudURL" name="baseCloudURL" data-sidesell-value="">
+<input type="hidden" id="clientName" name="clientName" value="QR-ROW" data-sidesell-value="QR-ROW">
+<input type="hidden" id="currentCurrency" name="CurrentCurrency" value="AUD" data-sidesell-value="AUD">
+<input type="hidden" id="UserNameLoyalty" value="Ronald Martinez" data-sidesell-value="Ronald Martinez">
+<input type="hidden" id="guestLoggedIn" value="Yes" data-sidesell-value="Yes">
+<input type="hidden" id="eliteTierName" value="" data-sidesell-value="">
+<input type="hidden" id="tierMiles" value="" data-sidesell-value="">
+<input type="hidden" id="productType" value="Fifa" data-sidesell-value="Fifa">
+<input type="hidden" id="agentCode" value="" data-sidesell-value="">
+<input type="hidden" id="loyaltyEmailHash" value="" data-sidesell-value="">
+<input type="hidden" id="loyalty-ffp" value="" data-sidesell-value="">
+<input type="hidden" value="en-US" id="hdfCultureCode" data-sidesell-value="en-US">
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="logo">
+                    <a class="logo-content" href="https://www.qatarairways.com/holidays">
+                        <img src="{{ asset('img/logo.png') }}" alt="QR-ROW">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    {% block body %}
+    {% endblock %}
+</main>
+
+
+<footer>
+
+    <div class="footer">
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-xs-12">
+
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a target="_blank" href="https://www.qatarairways.com/en/holidays/terms-and-conditions.html">Terms and Conditions</a></li>
+                            |
+                            <li class="list-inline-item"><a target="_blank" href="https://www.qatarairways.com/en/holidays/cookie-notice.html">Cookie Notice</a></li>
+                            |
+                            <li class="list-inline-item"><a target="_blank" href="https://www.qatarairways.com/en/holidays/privacy-notice.html">Privacy Notice</a></li>
+                            |
+                            <li class="list-inline-item"><a target="_blank" href="https://www.qatarairways.com/en/holidays/contact-us.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 col-xs-12 text-right footer-copy-right extra-padding">
+                        © Overseas.
+                    </div>
+
+                    <div id="term-condition-gbp" class="col-md-12 col-xs-12 text-left term-condition-gbp term-condition-other">
+                        <p>
+
+                        </p>
+                        <p>For further information please see our <a>Terms &amp; Conditions</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" data-sidesell-value="">
+</footer>
+
+
+{#- - ====== BASE JS ====== - -#}
+{% block  javascripts %}
+    <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+    <script>
+        document.getElementsByClassName("range-time").oninput = function () {
+            var value = (this.value - this.min) / (this.max - this.min) * 100
+            this.style.background = 'linear-gradient(to right, #2b2b2b 0%, #2b2b2b ' + value + '%, #fff ' + value + '%, white 100%)'
+        };
+    </script>
+{% endblock %}
+</body>
+</html>
